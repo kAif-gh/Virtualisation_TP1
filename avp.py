@@ -26,7 +26,7 @@ try:
     json_string = json.dumps(data['data'])
 
     print(json_string)
-    print("hello")
+    print("hello !!")
 except (ConnectionError, Timeout, TooManyRedirects) as e:
     print(e)
 
