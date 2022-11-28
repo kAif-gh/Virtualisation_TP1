@@ -25,6 +25,6 @@ jobs:
     - name: build and Push
       uses: docker/build-push-action@v2
       with:
-        image: kaif007/pythonapp
-        push: true
-#         tags: kaif007/pythonapp:tagname
+#        image: kaif007/pythonapp
+         push: true
+         tags: kaif007/app:latest
