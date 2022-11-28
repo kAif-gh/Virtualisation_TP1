@@ -27,4 +27,4 @@ jobs:
       with:
 #        image: kaif007/pythonapp
          push: true
-         tags: kaif007/app:latest
+         tags: kaif007/pythonapp:latest
