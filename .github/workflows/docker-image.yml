@@ -16,15 +16,16 @@ jobs:
     - name: ckeckout
       uses: actions/checkout@v1
 
-    - name: Login
-      uses: docker/login-action@v1
+   
+         
+    - name: Login to Docker Hub
+      uses: docker/login-action@v2
       with:
-        username: ${{ secrets.DOCKER_USER }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
-
-    - name: build and Push
-      uses: docker/build-push-action@v2
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+    - name: Build and push
+      uses: docker/build-push-action@v3
       with:
-#        image: kaif007/pythonapp
-         push: true
-         tags: kaif007/pythonapp:latest
+          push: true
+          tags: kaif007/pythonapp:latest
+         
